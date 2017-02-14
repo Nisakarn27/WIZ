@@ -211,8 +211,10 @@
     <Compile Include="Areas\Hotel\Controllers\HotelController.cs" />
     <Compile Include="Areas\Hotel\HotelAreaRegistration.cs" />
     <Compile Include="Controllers\Api\Hotel\HotelController.cs" />
+    <Compile Include="Controllers\Api\Hotel\SettingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DBHelpers\DBHelpers.cs" />
+    <Compile Include="DBHelpers\SettingSQL.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -696,7 +698,7 @@
     <Folder Include="Scripts\css\" />
     <Folder Include="Scripts\examples\" />
     <Folder Include="Scripts\images\slider\" />
-    <Folder Include="Source\" />
+    <Folder Include="Source\app\" />
     <Folder Include="UploadFiles\Document\" />
     <Folder Include="UploadFiles\Images\" />
   </ItemGroup>
@@ -759,7 +761,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>50089</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:50089/</IISUrl>
+          <IISUrl>http://localhost:56565/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
