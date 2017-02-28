@@ -9,5 +9,9 @@ app.config(function ($stateProvider) {
         .state('home', {
             url: '/home',
             templateUrl: '\Home/Home',
+        })
+        .state('details', {
+            url: '/details',
+            templateUrl: '\Home/Details',
         });
 });
