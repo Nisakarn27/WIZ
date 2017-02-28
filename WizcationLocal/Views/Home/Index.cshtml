@@ -97,65 +97,65 @@
         <div class="container pagecontainer offset-0">
 
             <!-- FILTERS -->
-            <div class="col-md-3 filters offset-0">
+            <div class="col-md-4 filters offset-0">
                 <div class="bookfilters hpadding20">
 
                     <div class="w50percent">
                         <div class="radio">
                             <label>
-                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" ng-model="VacationType" value="1" checked>
                                 <span class="hotel-ico"></span> Hotels
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" ng-model="VacationType" value="2">
                                 <span class="flight-ico"></span> Flights
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                                <input type="radio" name="optionsRadios" id="optionsRadios3" ng-model="VacationType" value="3">
                                 <span class="suitcase-ico"></span> Vacations
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">
+                                <input type="radio" name="optionsRadios" id="optionsRadios4" ng-model="VacationType" value="4">
                                 <span class="car-ico"></span> Cars
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="optionsRadios" id="optionsRadios5" value="option5">
+                                <input type="radio" name="optionsRadios" id="optionsRadios5" ng-model="VacationType" value="5">
                                 <span class="cruise-ico"></span>Cruises
                             </label>
                         </div>
                     </div>
 
-                    <div class="w50percentlast">
+                    <div class="w50percentlast" ng-init="VacationType = 1">
                         <p class="cstyle08">Packages:</p>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="optionsRadios" id="optionsRadios6" value="option6">
+                                <input type="radio" name="optionsRadios" id="optionsRadios6" ng-model="VacationType" value="6">
                                 Flight+Hotel+Car
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="optionsRadios" id="optionsRadios7" value="option7">
+                                <input type="radio" name="optionsRadios" id="optionsRadios7" ng-model="VacationType" value="7">
                                 Flight+Hotel
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="optionsRadios" id="optionsRadios8" value="option8">
+                                <input type="radio" name="optionsRadios" id="optionsRadios8" ng-model="VacationType" value="8">
                                 Flight+Car
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="optionsRadios" id="optionsRadios9" value="option9">
+                                <input type="radio" name="optionsRadios" id="optionsRadios9" ng-model="VacationType" value="9">
                                 Hotel+Car
                             </label>
                         </div>
@@ -164,7 +164,7 @@
                     <div class="clearfix"></div><br />
 
                     <!-- HOTELS TAB -->
-                    <div class="hotelstab2 none">
+                    <div class="hotelstab2" ng-show="VacationType == 1">
                         <span class="opensans size13">Where do you want to go?</span>
                         <input type="text" class="form-control" placeholder="Greece">
 
@@ -309,7 +309,7 @@
                     </div>
                     <!-- END OF HOTELS TAB -->
                     <!-- FLIGHTS TAB -->
-                    <div class="flightstab2 none">
+                    <div class="flightstab2" ng-show="VacationType == 2">
                         <div class="w50percent">
                             <div class="wh90percent textleft">
                                 <span class="opensans size13">Flying from</span>
@@ -375,7 +375,7 @@
                     </div>
                     <!-- END OF FLIGHTS TAB -->
                     <!-- VACATIONS TAB -->
-                    <div class="vacationstab2 none">
+                    <div class="vacationstab2" ng-show="VacationType == 3">
                         <div class="w50percent">
                             <div class="wh90percent textleft">
                                 <span class="opensans size13">Flying from</span>
@@ -531,7 +531,7 @@
                     </div>
                     <!-- END OF VACATIONS TAB -->
                     <!-- CARS TAB -->
-                    <div class="carstab2 none">
+                    <div class="carstab2" ng-show="VacationType == 4">
                         <div class="w50percent">
                             <div class="wh90percent textleft">
                                 <span class="opensans size13">Picking up</span>
@@ -681,7 +681,7 @@
                     </div>
                     <!-- END OF CARS TAB -->
                     <!-- CRUISE TAB -->
-                    <div class="cruisestab2 none">
+                    <div class="cruisestab2" ng-show="VacationType == 5">
                         <div class="fullwidth">
                             <span class="opensans size13">Going to</span>
                             <select class="form-control mySelectBoxClass">
@@ -741,7 +741,7 @@
                     </div>
                     <!-- END OF CRUISE TAB -->
                     <!-- FLIGHT+HOTEL+CAR TAB -->
-                    <div class="flighthotelcartab2 none">
+                    <div class="flighthotelcartab2" ng-show="VacationType == 6">
 
                         <div class="w50percent">
                             <div class="wh90percent textleft">
@@ -899,7 +899,7 @@
                     </div>
                     <!-- END OF FLIGHT+HOTE+CAR TAB -->
                     <!-- FLIGHT+HOTEL TAB -->
-                    <div class="flighthoteltab2 none">
+                    <div class="flighthoteltab2" ng-show="VacationType == 7">
 
 
                         <div class="w50percent">
@@ -1060,7 +1060,7 @@
                     </div>
                     <!-- END OF FLIGHT+HOTE TAB -->
                     <!-- FLIGHT+CAR TAB -->
-                    <div class="flightcartab2 none">
+                    <div class="flightcartab2" ng-show="VacationType == 8">
                         <div class="w50percent">
                             <div class="wh90percent textleft">
                                 <span class="opensans size13">Flying from</span>
@@ -1100,7 +1100,7 @@
                     </div>
                     <!-- END OF FLIGHT+CAR TAB -->
                     <!-- HOTEL+CAR TAB -->
-                    <div class="hotelcartab2 none">
+                    <div class="hotelcartab2" ng-show="VacationType == 9">
 
                         <span class="opensans size13">Where do you want to go?</span>
                         <input type="text" class="form-control" placeholder="Greece">
@@ -1254,7 +1254,7 @@
             </div>
             <!-- END OF FILTERS -->
             <!-- LIST CONTENT-->
-            <div class="rightcontent col-md-9 offset-0">
+            <div class="rightcontent col-md-8 offset-0">
 
                 <div class="hpadding20">
                     <!-- Top filters -->
