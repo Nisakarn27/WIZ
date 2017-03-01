@@ -18,7 +18,7 @@ namespace WizcationLocal.DBHelpers
     }
     public class SettingSQL: ISettingSQL
     {
-
+       
         string errMsg = "";
 
         private int GetMaxID(string tableName,string ColumnName) {
@@ -31,6 +31,7 @@ namespace WizcationLocal.DBHelpers
             ObjConn.Close();
             return MaxID;
         }
+
         #region Agent Type
         // Show agent type
         public DataTable ListAgentType()
