@@ -210,11 +210,36 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Hotel\Controllers\HotelController.cs" />
     <Compile Include="Areas\Hotel\HotelAreaRegistration.cs" />
+    <Compile Include="Controllers\Api\BaseController.cs" />
     <Compile Include="Controllers\Api\Hotel\HotelController.cs" />
     <Compile Include="Controllers\Api\Hotel\SettingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DBHelpers\DBHelpers.cs" />
     <Compile Include="DBHelpers\SettingSQL.cs" />
+    <Compile Include="Entities\agent_department.cs" />
+    <Compile Include="Entities\agent_linkto.cs" />
+    <Compile Include="Entities\agent_type.cs" />
+    <Compile Include="Entities\agent__data.cs" />
+    <Compile Include="Entities\booking_log.cs" />
+    <Compile Include="Entities\calendar_price.cs" />
+    <Compile Include="Entities\catergory_room.cs" />
+    <Compile Include="Entities\DecimalPrecisionAttribute.cs" />
+    <Compile Include="Entities\file.cs" />
+    <Compile Include="Entities\language.cs" />
+    <Compile Include="Entities\permission_group.cs" />
+    <Compile Include="Entities\permission_group_name.cs" />
+    <Compile Include="Entities\permission_item.cs" />
+    <Compile Include="Entities\permission_item_name.cs" />
+    <Compile Include="Entities\poperties_catergory.cs" />
+    <Compile Include="Entities\properties_amenities.cs" />
+    <Compile Include="Entities\properties_data.cs" />
+    <Compile Include="Entities\room.cs" />
+    <Compile Include="Entities\sales_data.cs" />
+    <Compile Include="Entities\staff.cs" />
+    <Compile Include="Entities\staffs_linktoagent.cs" />
+    <Compile Include="Entities\staffs_permission.cs" />
+    <Compile Include="Entities\status_booking.cs" />
+    <Compile Include="Entities\status_room.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -223,6 +248,9 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModel\CalendarPrice.cs" />
+    <Compile Include="ViewModel\CatergoryRoomViewModel.cs" />
+    <Compile Include="ViewModel\HotelViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
