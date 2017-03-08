@@ -3,40 +3,15 @@
     <!-- SLIDER -->
     <div class="col-md-8 details-slider">
 
-        <div id="c-carousel">
-            <div id="wrapper">
-                <div id="inner">
-                    <div id="caroufredsel_wrapper2">
-                        <div id="carousel">
-                            <img src="images/details-slider/slide1.jpg" alt="" />
-                            <img src="images/details-slider/slide2.jpg" alt="" />
-                            <img src="images/details-slider/slide3.jpg" alt="" />
-                            <img src="images/details-slider/slide4.jpg" alt="" />
-                            <img src="images/details-slider/slide5.jpg" alt="" />
-                            <img src="images/details-slider/slide6.jpg" alt="" />
-                        </div>
+        <div class="carousel-demo">
+            <ul rn-carousel rn-carousel-index="carouselIndex2" rn-carousel-auto-slide rn-carousel-pause-on-hover rn-carousel-buffered class="carousel1">
+                <li ng-repeat="slide in slides2 track by slide.id" ng-class="'id-' + slide.id">
+                    <div ng-style="{'background-image': 'url(' + slide.img + ')'}" class="bgimage">
                     </div>
-                    <div id="pager-wrapper">
-                        <div id="pager">
-                            <img src="images/details-slider/slide1.jpg" width="120" height="68" alt="" />
-                            <img src="images/details-slider/slide2.jpg" width="120" height="68" alt="" />
-                            <img src="images/details-slider/slide3.jpg" width="120" height="68" alt="" />
-                            <img src="images/details-slider/slide4.jpg" width="120" height="68" alt="" />
-                            <img src="images/details-slider/slide5.jpg" width="120" height="68" alt="" />
-                            <img src="images/details-slider/slide6.jpg" width="120" height="68" alt="" />
-                        </div>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-                <button id="prev_btn2" class="prev2"><img src="images/spacer.png" alt="" /></button>
-                <button id="next_btn2" class="next2"><img src="images/spacer.png" alt="" /></button>
-
-            </div>
-        </div> <!-- /c-carousel -->
-
-
-
-
+                </li>
+            </ul>
+            <div rn-carousel-indicators ng-if="slides2.length > 1" slides="slides2" rn-carousel-index="carouselIndex2"></div>
+        </div>
 
     </div>
     <!-- END OF SLIDER -->
@@ -44,16 +19,16 @@
     <div class="col-md-4 detailsright offset-0">
         <div class="padding20">
             <h4 class="lh1">Mabely Grand Hotel</h4>
-            <img src="images/smallrating-5.png" alt="" />
+            <img src="~/Scripts/images/smallrating-5.png" alt="" />
         </div>
 
         <div class="line3"></div>
 
-        <div class="hpadding20">
+        @*<div class="hpadding20">
             <h2 class="opensans slim green2">Wonderful!</h2>
         </div>
 
-        <div class="line3 margtop20"></div>
+        <div class="line3 margtop20"></div>*@
 
         <div class="col-md-6 bordertype1 padding20">
             <span class="opensans size30 bold grey2">97%</span><br />
@@ -65,7 +40,7 @@
         </div>
 
         <div class="col-md-6 bordertype3">
-            <img src="images/user-rating-4.png" alt="" /><br />
+            <img src="~/Scripts/images/user-rating-4.png" alt="" /><br />
             18 reviews
         </div>
         <div class="col-md-6 bordertype3">
@@ -89,13 +64,12 @@
         <div class="cstyle10"></div>
 
         <ul class="nav nav-tabs" id="myTab">
-            <li onclick="mySelectUpdate()" class=""><a data-toggle="tab" href="#summary"><span class="summary"></span><span class="hidetext">Summary</span>&nbsp;</a></li>
-            <li onclick="mySelectUpdate()" class="active"><a data-toggle="tab" href="#roomrates"><span class="rates"></span><span class="hidetext">Room rates</span>&nbsp;</a></li>
-            <li onclick="mySelectUpdate()" class=""><a data-toggle="tab" href="#preferences"><span class="preferences"></span><span class="hidetext">Preferences</span>&nbsp;</a></li>
-            <li onclick="loadScript()" class=""><a data-toggle="tab" href="#maps"><span class="maps"></span><span class="hidetext">Maps</span>&nbsp;</a></li>
-            <li onclick="mySelectUpdate(); trigerJslider(); trigerJslider2(); trigerJslider3(); trigerJslider4(); trigerJslider5(); trigerJslider6();" class=""><a data-toggle="tab" href="#reviews"><span class="reviews"></span><span class="hidetext">Reviews</span>&nbsp;</a></li>
-            <li onclick="mySelectUpdate()" class=""><a data-toggle="tab" href="#thingstodo"><span class="thingstodo"></span><span class="hidetext">Things to do</span>&nbsp;</a></li>
-
+            <li onclick="mySelectUpdate()" class=""><a data-toggle="tab" href="#summary" onclick="return false"><span class="summary"></span><span class="hidetext">Summary</span>&nbsp;</a></li>
+            <li onclick="mySelectUpdate()" class="active"><a data-toggle="tab" href="#roomrates" onclick="return false"><span class="rates"></span><span class="hidetext">Room rates</span>&nbsp;</a></li>
+            <li onclick="mySelectUpdate()" class=""><a data-toggle="tab" href="#preferences" onclick="return false"><span class="preferences"></span><span class="hidetext">Preferences</span>&nbsp;</a></li>
+            <li onclick="loadScript()" class=""><a data-toggle="tab" href="#maps" onclick="return false"><span class="maps"></span><span class="hidetext">Maps</span>&nbsp;</a></li>
+            <li onclick="mySelectUpdate(); trigerJslider(); trigerJslider2(); trigerJslider3(); trigerJslider4(); trigerJslider5(); trigerJslider6();" class=""><a data-toggle="tab" href="#reviews" onclick="return false"><span class="reviews"></span><span class="hidetext">Reviews</span>&nbsp;</a></li>
+            <li onclick="mySelectUpdate()" class=""><a data-toggle="tab" href="#thingstodo" onclick="return false"><span class="thingstodo"></span><span class="hidetext">Things to do</span>&nbsp;</a></li>
         </ul>
         <div class="tab-content4">
             <!-- TAB 1 -->
@@ -283,7 +257,7 @@
                                 <div class="w50percent">
                                     <div class="wh90percent textleft">
                                         <span class="opensans size13"><b>ROOM 2</b></span><br />
-                                        <div class="addroom2 block grey"><a onclick="addroom3()" class="grey cpointer">+ Add room</a> | <a onclick="removeroom2()" class="orange cpointer"><img src="images/delete.png" alt="delete" /></a></div>
+                                        <div class="addroom2 block grey"><a onclick="addroom3()" class="grey cpointer">+ Add room</a> | <a onclick="removeroom2()" class="orange cpointer"><img src="~/Scripts/images/delete.png" alt="delete" /></a></div>
                                     </div>
                                 </div>
 
@@ -323,7 +297,7 @@
                                 <div class="w50percent">
                                     <div class="wh90percent textleft">
                                         <span class="opensans size13"><b>ROOM 3</b></span><br />
-                                        <div class="addroom3 block grey"><a onclick="addroom3()" class="grey cpointer">+ Add room</a> | <a onclick="removeroom3()" class="orange cpointer"><img src="images/delete.png" alt="delete" /></a></div>
+                                        <div class="addroom3 block grey"><a onclick="addroom3()" class="grey cpointer">+ Add room</a> | <a onclick="removeroom3()" class="orange cpointer"><img src="~/Scripts/images/delete.png" alt="delete" /></a></div>
                                     </div>
                                 </div>
 
@@ -373,7 +347,7 @@
 
                 <div class="padding20">
                     <div class="col-md-4 offset-0">
-                        <a href="#"><img src="images/items2/item1.jpg" alt="" class="fwimg" /></a>
+                        <a href="#"><img src="~/Scripts/images/items2/item1.jpg" alt="" class="fwimg" /></a>
                     </div>
                     <div class="col-md-8 offset-0">
                         <div class="col-md-8 mediafix1">
@@ -407,7 +381,7 @@
 
                 <div class="padding20">
                     <div class="col-md-4 offset-0">
-                        <a href="#"><img src="images/items2/item2.jpg" alt="" class="fwimg" /></a>
+                        <a href="#"><img src="~/Scripts/images/items2/item2.jpg" alt="" class="fwimg" /></a>
                     </div>
                     <div class="col-md-8 offset-0">
                         <div class="col-md-8">
@@ -441,7 +415,7 @@
 
                 <div class="padding20">
                     <div class="col-md-4 offset-0">
-                        <a href="#"><img src="images/items2/item3.jpg" alt="" class="fwimg" /></a>
+                        <a href="#"><img src="~/Scripts/images/items2/item3.jpg" alt="" class="fwimg" /></a>
                     </div>
                     <div class="col-md-8 offset-0">
                         <div class="col-md-8">
@@ -475,7 +449,7 @@
 
                 <div class="padding20">
                     <div class="col-md-4 offset-0">
-                        <a href="#"><img src="images/items2/item4.jpg" alt="" class="fwimg" /></a>
+                        <a href="#"><img src="~/Scripts/images/items2/item4.jpg" alt="" class="fwimg" /></a>
                     </div>
                     <div class="col-md-8 offset-0">
                         <div class="col-md-8">
@@ -650,7 +624,7 @@
                 <div class="hpadding20">
                     <div class="col-md-4 offset-0">
                         <span class="opensans dark size60 slim lh3 ">4.5/5</span><br />
-                        <img src="images/user-rating-4.png" alt="" />
+                        <img src="~/Scripts/images/user-rating-4.png" alt="" />
                     </div>
                     <div class="col-md-8 offset-0">
                         <div class="progress progress-striped">
@@ -711,12 +685,12 @@
                         <div class="padding20">
                             <div class="bordertype5">
                                 <div class="circlewrap">
-                                    <img src="images/user-avatar.jpg" class="circleimg" alt="" />
+                                    <img src="~/Scripts/images/user-avatar.jpg" class="circleimg" alt="" />
                                     <span>4.5</span>
                                 </div>
                                 <span class="dark">by Sena</span><br />
                                 from London, UK<br />
-                                <img src="images/check.png" alt="" /><br />
+                                <img src="~/Scripts/images/check.png" alt="" /><br />
                                 <span class="orange">Recommended<br />for Everyone</span>
                             </div>
 
@@ -747,12 +721,12 @@
                         <div class="padding20">
                             <div class="bordertype5">
                                 <div class="circlewrap">
-                                    <img src="images/user-avatar.jpg" class="circleimg" alt="" />
+                                    <img src="~/Scripts/images/user-avatar.jpg" class="circleimg" alt="" />
                                     <span>4.5</span>
                                 </div>
                                 <span class="dark">by Sena</span><br />
                                 from London, UK<br />
-                                <img src="images/check.png" alt="" /><br />
+                                <img src="~/Scripts/images/check.png" alt="" /><br />
                                 <span class="orange">Recommended<br />for Everyone</span>
                             </div>
 
@@ -783,12 +757,12 @@
                         <div class="padding20">
                             <div class="bordertype5">
                                 <div class="circlewrap">
-                                    <img src="images/user-avatar.jpg" class="circleimg" alt="" />
+                                    <img src="~/Scripts/images/user-avatar.jpg" class="circleimg" alt="" />
                                     <span>4.5</span>
                                 </div>
                                 <span class="dark">by Sena</span><br />
                                 from London, UK<br />
-                                <img src="images/check.png" alt="" /><br />
+                                <img src="~/Scripts/images/check.png" alt="" /><br />
                                 <span class="orange">Recommended<br />for Everyone</span>
                             </div>
 
@@ -840,22 +814,22 @@
                 </div>
                 <div class="wh66percent right offset-0">
                     <script>
-								//This is a fix for when the slider is used in a hidden div
-								function testTriger(){
-									setTimeout(function (){
-										$(".cstyle01").resize();
-									}, 500);
-								}
+                        //This is a fix for when the slider is used in a hidden div
+                        function testTriger() {
+                            setTimeout(function () {
+                                $(".cstyle01").resize();
+                            }, 500);
+                        }
                     </script>
                     <div class="padding20 relative wh70percent">
                         <div class="layout-slider wh100percent">
                             <span class="cstyle01"><input id="Slider1" type="slider" name="price" value="0;4.2" /></span>
                         </div>
                         <script type="text/javascript">
-								function trigerJslider(){
-								  jQuery("#Slider1").slider({ from: 0, to: 5, step: 0.1, smooth: true, round: 1, dimension: "", skin: "round" });
-								  testTriger();
-								  }
+                            function trigerJslider() {
+                                jQuery("#Slider1").slider({ from: 0, to: 5, step: 0.1, smooth: true, round: 1, dimension: "", skin: "round" });
+                                testTriger();
+                            }
                         </script>
 
 
@@ -864,45 +838,45 @@
                             <span class="cstyle01"><input id="Slider2" type="slider" name="price" value="0;5.0" /></span>
                         </div>
                         <script type="text/javascript">
-								function trigerJslider2(){
-								  jQuery("#Slider2").slider({ from: 0, to: 5, step: 0.1, smooth: true, round: 1, dimension: "", skin: "round" });
-								  }
+                            function trigerJslider2() {
+                                jQuery("#Slider2").slider({ from: 0, to: 5, step: 0.1, smooth: true, round: 1, dimension: "", skin: "round" });
+                            }
                         </script>
 
                         <div class="layout-slider margtop10 wh100percent">
                             <span class="cstyle01"><input id="Slider3" type="slider" name="price" value="0;2.5" /></span>
                         </div>
                         <script type="text/javascript">
-								function trigerJslider3(){
-								  jQuery("#Slider3").slider({ from: 0, to: 5, step: 0.1, smooth: true, round: 1, dimension: "", skin: "round" });
-								  }
+                            function trigerJslider3() {
+                                jQuery("#Slider3").slider({ from: 0, to: 5, step: 0.1, smooth: true, round: 1, dimension: "", skin: "round" });
+                            }
                         </script>
 
                         <div class="layout-slider margtop10 wh100percent">
                             <span class="cstyle01"><input id="Slider4" type="slider" name="price" value="0;3.8" /></span>
                         </div>
                         <script type="text/javascript">
-								function trigerJslider4(){
-								  jQuery("#Slider4").slider({ from: 0, to: 5, step: 0.1, smooth: true, round: 1, dimension: "", skin: "round" });
-								  }
+                            function trigerJslider4() {
+                                jQuery("#Slider4").slider({ from: 0, to: 5, step: 0.1, smooth: true, round: 1, dimension: "", skin: "round" });
+                            }
                         </script>
 
                         <div class="layout-slider margtop10 wh100percent">
                             <span class="cstyle01"><input id="Slider5" type="slider" name="price" value="0;4.4" /></span>
                         </div>
                         <script type="text/javascript">
-								function trigerJslider5(){
-								  jQuery("#Slider5").slider({ from: 0, to: 5, step: 0.1, smooth: true, round: 1, dimension: "", skin: "round" });
-								  }
+                            function trigerJslider5() {
+                                jQuery("#Slider5").slider({ from: 0, to: 5, step: 0.1, smooth: true, round: 1, dimension: "", skin: "round" });
+                            }
                         </script>
 
                         <div class="layout-slider margtop10 wh100percent">
                             <span class="cstyle01"><input id="Slider6" type="slider" name="price" value="0;4.0" /></span>
                         </div>
                         <script type="text/javascript">
-								function trigerJslider6(){
-								  jQuery("#Slider6").slider({ from: 0, to: 5, step: 0.1, smooth: true, round: 1, dimension: "", skin: "round" });
-								  }
+                            function trigerJslider6() {
+                                jQuery("#Slider6").slider({ from: 0, to: 5, step: 0.1, smooth: true, round: 1, dimension: "", skin: "round" });
+                            }
                         </script>
 
                         <input type="text" class="form-control margtop10" placeholder="">
@@ -939,7 +913,7 @@
 
                 <div class="padding20">
                     <div class="col-md-4 offset-0">
-                        <a href="#"><img src="images/items2/item5.jpg" alt="" class="fwimg" /></a>
+                        <a href="#"><img src="~/Scripts/images/items2/item5.jpg" alt="" class="fwimg" /></a>
                     </div>
                     <div class="col-md-8 offset-0">
                         <div class="col-md-8 mediafix1">
@@ -949,7 +923,7 @@
                             <div class="clearfix"></div>
                         </div>
                         <div class="col-md-4 center bordertype4">
-                            <img src="images/user-rating-4.png" alt="" /><br />
+                            <img src="~/Scripts/images/user-rating-4.png" alt="" /><br />
                             <span class="opensans grey size14">31 reviews</span>
                             <br /><br /><br /><br />
                             <button class="bookbtn mt1">More</button>
@@ -961,7 +935,7 @@
 
                 <div class="padding20">
                     <div class="col-md-4 offset-0">
-                        <a href="#"><img src="images/items2/item6.jpg" alt="" class="fwimg" /></a>
+                        <a href="#"><img src="~/Scripts/images/items2/item6.jpg" alt="" class="fwimg" /></a>
                     </div>
                     <div class="col-md-8 offset-0">
                         <div class="col-md-8 mediafix1">
@@ -971,7 +945,7 @@
                             <div class="clearfix"></div>
                         </div>
                         <div class="col-md-4 center bordertype4">
-                            <img src="images/user-rating-5.png" alt="" /><br />
+                            <img src="~/Scripts/images/user-rating-5.png" alt="" /><br />
                             <span class="opensans grey size14">23 reviews</span>
                             <br /><br /><br /><br />
                             <button class="bookbtn mt1">More</button>
@@ -983,7 +957,7 @@
 
                 <div class="padding20">
                     <div class="col-md-4 offset-0">
-                        <a href="#"><img src="images/items2/item7.jpg" alt="" class="fwimg" /></a>
+                        <a href="#"><img src="~/Scripts/images/items2/item7.jpg" alt="" class="fwimg" /></a>
                     </div>
                     <div class="col-md-8 offset-0">
                         <div class="col-md-8 mediafix1">
@@ -993,7 +967,7 @@
                             <div class="clearfix"></div>
                         </div>
                         <div class="col-md-4 center bordertype4">
-                            <img src="images/user-rating-3.png" alt="" /><br />
+                            <img src="~/Scripts/images/user-rating-3.png" alt="" /><br />
                             <span class="opensans grey size14">17 reviews</span>
                             <br /><br /><br /><br />
                             <button class="bookbtn mt1">More</button>
@@ -1005,7 +979,7 @@
 
                 <div class="padding20">
                     <div class="col-md-4 offset-0">
-                        <a href="#"><img src="images/items2/item8.jpg" alt="" class="fwimg" /></a>
+                        <a href="#"><img src="~/Scripts/images/items2/item8.jpg" alt="" class="fwimg" /></a>
                     </div>
                     <div class="col-md-8 offset-0">
                         <div class="col-md-8 mediafix1">
@@ -1015,7 +989,7 @@
                             <div class="clearfix"></div>
                         </div>
                         <div class="col-md-4 center bordertype4">
-                            <img src="images/user-rating-4.png" alt="" /><br />
+                            <img src="~/Scripts/images/user-rating-4.png" alt="" /><br />
                             <span class="opensans grey size14">10 reviews</span>
                             <br /><br /><br /><br />
                             <button class="bookbtn mt1">More</button>
@@ -1059,24 +1033,24 @@
                 <div class="clearfix"></div>
             </div>
             <div class="cpadding1 ">
-                <a href="#"><img src="images/smallthumb-1.jpg" class="left mr20" alt="" /></a>
+                <a href="#"><img src="~/Scripts/images/smallthumb-1.jpg" class="left mr20" alt="" /></a>
                 <a href="#" class="dark"><b>Hotel Amaragua</b></a><br />
                 <span class="opensans green bold size14">$36-$160</span> <span class="grey">avg/night</span><br />
-                <img src="images/filter-rating-5.png" alt="" />
+                <img src="~/Scripts/images/filter-rating-5.png" alt="" />
             </div>
             <div class="line5"></div>
             <div class="cpadding1 ">
-                <a href="#"><img src="images/smallthumb-2.jpg" class="left mr20" alt="" /></a>
+                <a href="#"><img src="~/Scripts/images/smallthumb-2.jpg" class="left mr20" alt="" /></a>
                 <a href="#" class="dark"><b>Hotel Amaragua</b></a><br />
                 <span class="opensans green bold size14">$36-$160</span> <span class="grey">avg/night</span><br />
-                <img src="images/filter-rating-5.png" alt="" />
+                <img src="~/Scripts/images/filter-rating-5.png" alt="" />
             </div>
             <div class="line5"></div>
             <div class="cpadding1 ">
-                <a href="#"><img src="images/smallthumb-3.jpg" class="left mr20" alt="" /></a>
+                <a href="#"><img src="~/Scripts/images/smallthumb-3.jpg" class="left mr20" alt="" /></a>
                 <a href="#" class="dark"><b>Hotel Amaragua</b></a><br />
                 <span class="opensans green bold size14">$36-$160</span> <span class="grey">avg/night</span><br />
-                <img src="images/filter-rating-5.png" alt="" />
+                <img src="~/Scripts/images/filter-rating-5.png" alt="" />
             </div>
             <br />
 
@@ -1085,4 +1059,3 @@
 
     </div>
 </div>
-
