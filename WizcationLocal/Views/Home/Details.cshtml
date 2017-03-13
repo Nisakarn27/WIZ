@@ -196,7 +196,7 @@
                 <div class="hpadding20">
                     <p class="dark">Your travel rates</p>
                     <div class="col-md-4 offset-0">
-                        <div class="w50percent">
+                        @*<div class="w50percent">
                             <div class="wh90percent textleft">
                                 <span class="opensans size13"><b>Check in</b></span>
                                 <input type="text" class="form-control mySelectCalendar" id="datepicker" placeholder="mm/dd/yyyy" />
@@ -208,6 +208,18 @@
                                 <span class="opensans size13"><b>Check out</b></span>
                                 <input type="text" class="form-control mySelectCalendar" id="datepicker2" placeholder="mm/dd/yyyy" />
                             </div>
+                        </div>*@
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" id="dropdown" role="button" data-toggle="dropdown" data-target="#" href="#" onclick="return false">
+                                <div class="input-group">
+                                    <input type="text" id="date" name="date" class="form-control" data-ng-model="data.date">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                </div>
+                            </a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <datetimepicker data-ng-model="data.date"
+                                                data-datetimepicker-config="{ dropdownSelector: '#dropdown' }"></datetimepicker>
+                            </ul>
                         </div>
                     </div>
                     <div class="col-md-8 offset-0">

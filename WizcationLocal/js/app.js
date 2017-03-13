@@ -1,4 +1,4 @@
-﻿var app = angular.module('wizcation', ['ngSanitize', 'ui.router', 'angular-carousel']);
+﻿var app = angular.module('wizcation', ['ngSanitize', 'ui.router', 'angular-carousel', 'ui.bootstrap.datetimepicker']);
 
 app.config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise("/")
