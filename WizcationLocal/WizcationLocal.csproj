@@ -1602,6 +1602,7 @@
     </Content>
     <Content Include="js\app.js" />
     <Content Include="js\Details\Details.js" />
+    <Content Include="js\SearchDetails.js" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-aria.js" />
@@ -2631,6 +2632,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Home.cshtml" />
     <Content Include="Views\Home\Details.cshtml" />
+    <Content Include="Views\Home\SearchDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
