@@ -1,5 +1,5 @@
 ﻿angular.module('wizcation').controller('SearchDetailsController', ['$scope', function ($scope) {
-    $scope.seeDetals = function () {
+    $scope.seeDetails = function () {
         parent.location = '#/details'
     }
 }])
