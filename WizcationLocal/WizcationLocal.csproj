@@ -2633,6 +2633,8 @@
     <Content Include="Views\Home\Home.cshtml" />
     <Content Include="Views\Home\Details.cshtml" />
     <Content Include="Views\Home\SearchDetails.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
