@@ -1,15 +1,17 @@
-﻿var app = angular.module('wizcation', ['ngSanitize', 'ui.router', 'angular-carousel', 'ui.bootstrap.datetimepicker']);
+﻿var app = angular.module('wizcation', ['ngSanitize', 'ui.router']);
 
-app.config(function ($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise("/")
+app.config(function ($stateProvider) {
     $stateProvider
         .state('/', {
-            url: "/",
-            templateUrl: '\Home/Home'
+            url: '/',
+            templateUrl: '\Home/Index'
+        })
+        .state('home', {
+            url: '/home',
+            templateUrl: '\Home/Home',
         })
         .state('details', {
             url: '/details',
             templateUrl: '\Home/Details',
-            controller: 'DetailController'
         });
 });
