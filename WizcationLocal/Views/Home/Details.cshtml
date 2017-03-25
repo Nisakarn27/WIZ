@@ -2,41 +2,15 @@
 
     <!-- SLIDER -->
     <div class="col-md-8 details-slider">
-
-        <div id="c-carousel">
-            <div id="wrapper">
-                <div id="inner">
-                    <div id="caroufredsel_wrapper2">
-                        <div id="carousel">
-                            <img src="images/details-slider/slide1.jpg" alt="" />
-                            <img src="images/details-slider/slide2.jpg" alt="" />
-                            <img src="images/details-slider/slide3.jpg" alt="" />
-                            <img src="images/details-slider/slide4.jpg" alt="" />
-                            <img src="images/details-slider/slide5.jpg" alt="" />
-                            <img src="images/details-slider/slide6.jpg" alt="" />
-                        </div>
+        <div class="carousel-demo">
+            <ul rn-carousel rn-carousel-index="carouselIndex2" rn-carousel-auto-slide rn-carousel-pause-on-hover rn-carousel-buffered class="carousel1">
+                <li ng-repeat="slide in slides2 track by slide.id" ng-class="'id-' + slide.id">
+                    <div ng-style="{'background-image': 'url(' + slide.img + ')'}" class="bgimage">
                     </div>
-                    <div id="pager-wrapper">
-                        <div id="pager">
-                            <img src="images/details-slider/slide1.jpg" width="120" height="68" alt="" />
-                            <img src="images/details-slider/slide2.jpg" width="120" height="68" alt="" />
-                            <img src="images/details-slider/slide3.jpg" width="120" height="68" alt="" />
-                            <img src="images/details-slider/slide4.jpg" width="120" height="68" alt="" />
-                            <img src="images/details-slider/slide5.jpg" width="120" height="68" alt="" />
-                            <img src="images/details-slider/slide6.jpg" width="120" height="68" alt="" />
-                        </div>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-                <button id="prev_btn2" class="prev2"><img src="images/spacer.png" alt="" /></button>
-                <button id="next_btn2" class="next2"><img src="images/spacer.png" alt="" /></button>
-
-            </div>
-        </div> <!-- /c-carousel -->
-
-
-
-
+                </li>
+            </ul>
+            <div rn-carousel-indicators ng-if="slides2.length > 1" slides="slides2" rn-carousel-index="carouselIndex2"></div>
+        </div>
 
     </div>
     <!-- END OF SLIDER -->
